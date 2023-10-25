@@ -1,0 +1,250 @@
+@import url(/css/variables.css);
+
+main {
+   display: grid;
+   place-items: center;
+   align-content: center;
+   position: relative;
+}
+
+.grid-container {
+   max-width: 54rem;
+   display: grid;
+   grid-template-rows: auto 1fr;
+   border-radius: 2rem;
+   overflow: hidden;
+   box-shadow: var(--container-shadow);
+   margin: 80px 20px;
+   position: relative;
+   background-color: #fff;
+   border-top: 2px solid var(--clr-primary);
+   border-bottom: 2px solid var(--clr-primary);
+}
+
+.image-item {
+   margin: 20px auto;
+   padding: 0 20px;
+   padding-top: 50px;
+}
+
+.image-item img {
+   max-width: 200px;
+   border-radius: 8px;
+   box-shadow: 0 0.5em 0.5em -0.4em #000;
+   transform: translateY(-0.25em);
+}
+
+.product-item {
+   padding: 2.5rem;
+   display: grid;
+   align-content: center;
+   gap: 1rem;
+   font-size: 1.25em;
+   margin: 0 auto;
+   justify-items: center;
+   text-align: center;
+}
+
+.product-item h1 {
+   font-family: var(--ff-toko);
+   letter-spacing: 1px;
+   font-size: 2em;
+   text-transform: uppercase;
+}
+
+.product-item h2 {
+   font-size: 1.3em;
+}
+
+.close-button {
+   max-width: 30px;
+   text-decoration: none;
+}
+
+.close-button i {
+   font-size: 2em;
+   color: #000;
+   transition: linear 300ms;
+}
+
+.close-button i:hover {
+   color: var(--clr-primary);
+   transform: translateY(-0.075em);
+}
+
+.vertical-line {
+   display: none;
+}
+
+.add-to-cart {
+   outline: none;
+   border: none;
+}
+
+.add-to-cart:hover {
+   background: var(--clr-secondary);
+}
+
+.added-to-cart-overlay {
+   border-top: 2px solid var(--clr-primary);
+   border-bottom: 2px solid var(--clr-primary);
+   padding: 2em 1.5em;
+   border-radius: 2rem;
+   max-width: 24em;
+   margin: 0 auto;
+   width: 90%;
+   text-align: center;
+   display: none;
+   position: absolute;
+   top: 20%;
+   z-index: 1;
+   background: #fff;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 3em;
+}
+
+.added-to-cart-overlay h2 {
+   font-family: var(--ff-right);
+   letter-spacing: 1px;
+   font-size: 2.125em;
+}
+
+.overlay__buttons {
+   display: flex;
+   width: 100%;
+   gap: 1em;
+}
+
+.overlay__buttons button {
+   flex: 1;
+   background: #000;
+   color: #fff;
+   border: none;
+   font-family: var(--ff-right);
+   font-size: 1em;
+   padding: 0.25em 0.125em;
+   border-radius: 0.5em;
+   text-transform: uppercase;
+   transition: 200ms background ease;
+}
+
+.overlay__buttons button:hover {
+   background: var(--clr-secondary);
+   cursor: pointer;
+}
+
+.overlay__item img {
+   max-width: 60px;
+   border-radius: 0.3em;
+}
+
+.overlay__item {
+   display: flex;
+   gap: 1.5em;
+   justify-content: center;
+   align-items: center;
+   background: #efefef;
+   border-radius: 1rem;
+   width: 100%;
+   padding: 1em 0.5em;
+}
+
+.overlay__item h3,
+.overlay__item h4 {
+   font-family: var(--ff-toko);
+   font-size: 1.5em;
+}
+
+.opacity-class {
+   opacity: 0.5;
+   background: #c4c4c4;
+}
+
+.close-overlay {
+   border: none;
+   font-size: 1.35em;
+   background: #fff;
+}
+
+@media (min-width: 730px) {
+   .grid-container {
+      grid-template-columns: auto auto 1fr;
+      grid-template-rows: 1fr;
+      margin: 80px 20px;
+      min-height: 50vh;
+   }
+
+   .product-item {
+      justify-items: normal;
+      text-align: left;
+   }
+
+   .product-item .close-button,
+   .added-to-cart-overlay .close-button {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      width: 45px;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .image-item {
+      margin: auto 0;
+      padding: 20px 50px;
+   }
+
+   .image-item img {
+      max-width: 200px;
+   }
+
+   .vertical-line {
+      border-right: 2px solid #000;
+      display: initial;
+      margin: 80px 0;
+      box-shadow: var(--container-shadow);
+   }
+
+   .overlay__buttons button {
+      padding: 0.65em 0;
+   }
+
+   .added-to-cart-overlay {
+      max-width: 35em;
+   }
+
+   .overlay__item {
+      gap: 5em;
+      padding: 1em 1em;
+   }
+
+   .overlay__item h3 {
+      font-size: 2.25em;
+   }
+   
+   .overlay__item h4 {
+      font-size: 2em;
+   }
+
+   .overlay__item img {
+      max-width: 80px;
+   }
+
+   .added-to-cart-overlay h2 {
+      font-size: 2.5em;
+   }
+}
+
+@media (min-width: 1300px) {
+   .image-item img {
+      max-width: 220px;
+   }
+
+   .grid-container {
+      min-height: 52.5vh;
+   }
+}

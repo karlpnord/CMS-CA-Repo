@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The cart page is where a user can edit the game(s) he/she wants to buy before going to the checkout.">
+    <title>GameHub | Cart</title>
+    <link href="/css/styles.css" rel="stylesheet">
+    <link href="/css/styles-cart-summary.css" rel="stylesheet">
+    <link href="/css/loading-animation.css" rel="stylesheet">
+    <link href="/css/progression-bar.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/801ba823f5.js" crossorigin="anonymous"></script>
+    <!-- Hotjar Tracking Code for https://scintillating-sherbet-73ebbf.netlify.app/ -->
+    <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:3663714,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+  </head>
+  <body>
+    <header>
+      <input type="checkbox" id="menu-checkbox">
+      <label for="menu-checkbox"><i class="fas fa-bars"></i></label>
+      <h2>GameHub</h2>
+      <nav>
+         <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="games-page.html">Games</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+         </ul>
+      </nav>
+      <div class="shopping-cart">
+        <a href="cart-summary.html" aria-label="cart link"><i class="fa-solid fa-bag-shopping"></i></a>
+        <div class="shopping-cart-amount"></div>
+      </div>
+    </header>
+    <main>
+
+      <div class="progression-bar">
+        <div class="progression-bar__item progression-bar__active">
+          <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+        <div class="figure"></div>
+        <div class="progression-bar__item">
+          <i class="fa-solid fa-credit-card"></i>
+        </div>
+        <div class="figure"></div>
+        <div class="progression-bar__item">
+          <i class="fa-solid fa-check"></i>
+        </div>
+      </div>
+
+      <div class="secondary-nav">
+        <a href="index.html">
+          <i class="fa-solid fa-xmark"></i>
+          <h1>Cart</h1>
+        </a>
+      </div>
+      <div class="container">
+         <section class="section-heading">
+            <h2>Order Summary</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum minima iure non. Consequuntur, modi saepe!</p>
+         </section>
+
+         <div class="products"></div>
+         <div class="loading"></div>
+         <div class="error"></div>
+
+         <div class="totalprice-item">
+            <h2 class="total-price">Cart is empty!</h2>
+            <div class="checkout-buttons">
+              <button class="cta pay-now" id="locate-next-page">Go to Checkout</button>
+              <button class="clear-cart cta">Clear Cart</button>
+            </div>
+         </div>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2023 GameHub</p>
+      <p>Online Game Provider</p>
+    </footer>
+    <script src="/js/cart.js" type="module"></script>
+  </body>
+</html>

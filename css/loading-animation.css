@@ -1,0 +1,26 @@
+.loading {
+   border: 24px solid #000;
+   border-top: 24px solid var(--clr-primary);
+   border-radius: 50%;
+   width: 200px;
+   height: 200px;
+   margin: 5em auto;
+   animation: loading 3s linear infinite;
+}
+
+@keyframes loading {
+   0% { transform: rotate(0deg); }
+   100% { transform: rotate(360deg); }
+}
+
+.error {
+   width: 90%;
+   margin: 3em auto;
+   font-size: 2rem;
+   text-align: center;
+   border: 1px solid red;
+   color: red;
+   width: fit-content;
+   padding: 2em;
+   display: none;
+}

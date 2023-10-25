@@ -1,0 +1,341 @@
+@import url(/css/variables.css);
+
+/* Typography */
+
+.main-home h1 {
+   margin: 0 20px;
+   line-height: 1.5;
+   font-size: 1.5em;
+   text-transform: uppercase;
+}
+
+.homepage-contact h2 {
+   font-size: 1.25em;
+   line-height: 1.4;
+}
+
+.main-home h1,
+.homepage-contact h2 {
+   font-family: var(--ff-right);
+   letter-spacing: 1px;
+}
+
+.text-purple {
+   color: var(--clr-primary);
+   font-size: 1.25em;
+   display: inline-block;
+}
+
+.homepage-games h2,
+.homepage-reviews h2,
+.homepage-about h2 {
+   font-size: 2em;
+   font-family: var(--ff-right);
+   letter-spacing: 1px;
+}
+
+.games__item__article h3 {
+   margin-bottom: 10px;
+   font-family: var(--ff-toko);
+   letter-spacing: 1px;
+   text-transform: uppercase;
+   font-size: 1.5em;
+   text-align: left;
+}
+
+.games__item__article h5 {
+   font-size: 1.25em;
+}
+
+.games__item__article h4 {
+   font-size: 1em;
+}
+
+.homepage-reviews__item p {
+   line-height: 1.5;
+}
+
+.homepage-about p {
+   font-size: 1em;
+   letter-spacing: 1px;
+   line-height: 1.3;
+}
+
+/* Utility classes*/
+
+.flex-column {
+   display: flex;
+   flex-direction: column;
+}
+
+/* Page styling */
+
+.main-home {
+   background: #222;
+   background-blend-mode: multiply;
+   background-image: url("../images/gameconsolemobiledevice.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: bottom;
+   background-attachment: fixed;
+   color: #fff;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   min-height: 60vh;
+   min-height: 60dvh;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+}
+
+.main-home img {
+   max-width: 250px;
+}
+
+.homepage-games img {
+   max-width: 100px;
+   margin: auto 0;
+   border-radius: 10px;
+   box-shadow: 0 0.5em 0.5em -0.4em #000;
+   transform: translateY(-0.25em);
+}
+
+.homepage-games {
+   max-width: 20em;
+   margin: 100px auto;
+   text-align: center;
+}
+
+.homepage-games > * {
+   margin: 2em 0;
+}
+
+.homepage-games__container {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 1em;
+}
+
+.homepage-games__item {
+   display: grid;
+   grid-template-columns: auto auto 1fr;
+   gap: 1em;
+   box-shadow: var(--container-shadow);
+   padding: 30px;
+   border-radius: 12px;
+   max-width: 90%;
+   margin: 0 20px;
+   flex: 45%;
+}
+
+.homepage-games .cta-purple {
+   margin-inline: auto;
+}
+
+.vertical-line {
+   border-left: 1px solid #000;
+}
+
+.games__item__article {
+   display: flex;
+   flex-direction: column;
+   gap: 0.5em;
+   align-items: flex-start;
+   justify-content: center;
+}
+
+.cta-black {
+   margin-top: 10px;
+   padding: 10px 30px;
+}
+
+.homepage-contact {
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   margin: 0px auto;
+   padding-inline: 30px;
+   gap: 2em;
+   max-width: 20em;
+}
+
+.homepage-contact .cta-black {
+   padding: 12.5px 35px;
+   font-size: 1em;
+}
+
+.homepage-contact input {
+   width: 65%;
+   border-radius: 0.5em 0 0 0.5em;
+}
+
+.homepage-contact .cta-register {
+   border: none;
+   background: #000;
+   color: #fff;
+   padding: 0.6em 0;
+   width: 35%;
+   display: inline;
+   border-radius: 0 0.5em 0.5em 0;
+}
+
+.homepage-contact .cta-register:hover {
+   background: var(--clr-secondary);
+   cursor: pointer;
+}
+
+.homepage-contact__register {
+   display: flex;
+   margin: 0 auto;
+}
+
+.homepage-contact__item {
+   align-items: center;
+}
+
+.homepage-reviews {
+   justify-content: center;
+   align-items: center;
+   gap: 3em;
+   max-width: 20em;
+   margin: 100px auto;
+}
+
+.homepage-reviews__item {
+   gap: 1em;
+   padding: 30px;
+   box-shadow: var(--container-shadow);
+   border-radius: 12px;
+   max-width: 90%;
+}
+
+.homepage-about {
+   gap: 1.5em;
+   text-align: center;
+   padding: 20px;
+   max-width: 90%;
+   justify-content: center;
+   margin: 100px auto;
+   box-shadow: var(--container-shadow);
+   border-radius: 12px;
+   background: #414141;
+   color: #fff;
+}
+
+.icons {
+   display: flex;
+   justify-content: center;
+   gap: 0.5em;
+   font-size: 2.5em;
+   padding-top: 25px;
+}
+
+.email-error {
+   display: none;
+   color: red;
+}
+
+@media (min-width: 390px) {
+   .homepage-reviews,
+   .homepage-contact,
+   .homepage-games {
+      max-width: 40em;
+   }
+}
+
+@media (min-width: 730px) {
+   .main-home {
+      background-image: url("../images/game-console-g836463e15_1920.jpg");
+      background-position: center;
+      min-height: calc(100vh - 80px);
+   }
+
+   .main-home h1 {
+      font-size: 3em;
+   }
+
+   .main-home img {
+      max-width: 450px;
+   }
+
+   .flex-column {
+      flex-direction: row;
+      flex-wrap: wrap;
+   }
+
+   .homepage-contact h2,
+   .homepage-reviews h2,
+   .homepage-games h2,
+   .homepage-about h2 {
+      flex-basis: 100%;
+      text-align: center;
+      font-size: 2.5em;
+   }
+
+   .homepage-contact h2 {
+      font-size: 1.75em;
+   }
+
+   .homepage-reviews__item {
+      flex: 1;
+   }
+
+   .homepage-reviews,
+   .homepage-about {
+      max-width: 60em;
+   }
+
+   .homepage-about {
+      padding: 50px;
+   }
+
+   .homepage-contact,
+   .homepage-about {
+      margin: 140px auto;
+   }
+
+   .homepage-contact {
+      max-width: 40em;
+   }
+
+   .homepage-games {
+      max-width: 60em;
+      flex-direction: row;
+      flex-wrap: wrap;
+   }
+
+   .homepage-games__item {
+      flex-grow: 1;
+      min-width: 33%;
+      margin-inline: auto;
+   }
+
+   .homepage-games .cta-purple {
+      flex-basis: 100%;
+   }
+
+   .games__item__article h3 {
+      font-size: 1.8em;
+   }
+
+   .games__item__article {
+      text-align: left;
+   }
+
+   .homepage-contact__item {
+      justify-content: center;
+   }
+
+   .homepage-contact__register {
+      width: 80%;
+   }
+
+   .homepage-contact input {
+      height: 40px;
+   }
+
+   .homepage-contact .cta-register {
+      font-size: 1em;
+   }
+}

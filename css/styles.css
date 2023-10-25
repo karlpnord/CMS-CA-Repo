@@ -1,0 +1,277 @@
+/* Import variables */
+
+@import url(/css/variables.css);
+
+/* general styling */
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root {
+   touch-action: pan-x pan-y;
+   height: 100%; 
+ }
+
+body {
+   font-family: var(--ff-mont);
+   font-size: 16px;
+   min-height: 100vh;
+   min-height: 100dvh;
+   display: grid;
+   grid-template-rows: auto 1fr auto;
+}
+
+.line-break::before {
+   content: "\a";
+   white-space: pre;
+}
+
+/* Navigation and header*/
+
+header {
+   background-image: var(--bg-banner);
+   display: flex;
+   align-items: center;
+   width: 100%;
+   min-height: 80px;
+   justify-content: space-evenly;
+   position: relative;
+   color: #fff;
+   font-family: var(--ff-toko);
+   letter-spacing: 1.25;
+}
+
+header h2,
+nav li a {
+   font-size: 2rem;
+}
+
+header label {
+   font-size: 1.5rem;
+}
+
+nav, 
+#menu-checkbox {
+   display: none;
+}
+
+#menu-checkbox:checked ~ nav {
+   display: block;
+}
+
+nav {
+   position: absolute;
+   z-index: 2;
+   top: 80px;
+   width: 100%;
+   text-align: center;
+}
+
+nav ul {
+   background-image: var(--bg-banner);
+   border-top: 1px solid #fff;
+   border-bottom: 1px solid #fff;
+}
+
+nav li {
+   list-style-type: none;
+   padding: 10px 20px;
+}
+
+nav li a {
+   color: #fff;
+   text-decoration: none;
+   transition: color ease-in-out 300ms;
+}
+
+nav li a:hover {
+   color: #000;
+}
+
+/* CTA's, aref's and hover */
+
+.cta {
+   color: #fff;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-family: var(--ff-right);
+   border-radius: 8px;
+   text-align: center;
+   display: block;
+   transition: background ease 300ms;
+   letter-spacing: 1px;
+}
+
+.cta-purple {
+   background: var(--clr-primary);
+   font-size: 1.5em;
+   max-width: 250px;
+   padding: 10px 20px;
+}
+
+.cta-black {
+   background: #000;
+   max-width: 200px;
+   padding: 12.5px 30px;
+   font-size: 0.8em;
+}
+
+.cta-purple:hover,
+.cta-black:hover {
+   background: var(--clr-secondary);
+   cursor: pointer;
+}
+
+.secondary-nav a {
+   text-decoration: none;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: #fff;
+   border-radius: 8px;
+   padding: 5px 20px;
+   gap: 0.5em;
+   font-family: var(--ff-right);
+   letter-spacing: 2px;
+   color: #000;
+   transition: all ease 300ms;
+}
+
+.secondary-nav h1 {
+   font-size: 2.25em;
+   text-transform: uppercase;
+}
+
+.secondary-nav i {
+   font-size: 2.5em;
+}
+
+.secondary-nav a:hover {
+   box-shadow: var(--container-shadow);
+   transform: translateY(-0.2em);
+}
+
+.shopping-cart i{
+   font-size: 2.25em;
+   color: #fff;
+   transition: color ease 300ms;
+}
+
+.shopping-cart i:hover {
+   color: #000;
+}
+
+.shopping-cart {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 0.5em;
+}
+
+.shopping-cart-amount {
+   font-size: 1.5em;
+}
+
+.active-page {
+   text-decoration: underline;
+   
+}
+
+.active-page:hover {
+   text-decoration: none;
+}
+
+/* Forms styling */
+
+textarea:focus,
+select:focus,
+input[type="text"]:focus,
+textarea[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+#cvc:focus {
+   outline: none !important;
+   border: 2px solid var(--clr-primary);
+}
+
+#cvc,
+select,
+input,
+textarea {
+   border: 1px solid #b3b3b3;
+}
+
+input,
+textarea {
+   font-size: 1em;
+   font-family: "Montserrat", Verdana, sans-serif;
+   padding: 5px;
+   padding-left: 10px;
+   border-radius: 8px;
+}
+
+input::placeholder,
+textarea::placeholder {
+   font-size: 1em;
+   color: #969696;
+}
+
+form label {
+   font-size: 0.75em;
+   font-weight: 600;
+}
+
+select {
+   height: 40px;
+   border-radius: 8px;
+   font-size: 1em;
+   font-family: "Montserrat", Verdana, sans-serif;
+}
+
+/* Footer */
+
+footer {
+   width: 100%;
+   text-align: center;
+   padding: 30px 0;
+   font-weight: 600;
+   background-image: var(--bg-banner);
+   color: #fff;
+}
+
+/* Responsive styling */
+
+@media (min-width: 730px) {
+   nav,
+   header img {
+      display: initial;
+   }
+
+   nav {
+      position: static;
+      background-image: none;
+   }
+
+   header label,
+   header h2 {
+      display: none;
+   }
+
+   nav ul {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 2em;
+      border-top: 0;
+      border-bottom: 0;
+      background-image: none;
+      padding-left: 5em;
+   }
+
+   .shopping-cart {
+      margin: 0 40px;
+   }
+}

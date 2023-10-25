@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="GameHub is an online marketplace designed for video game enthusiasts who want to buy or sell used games. The platform provides an easy-to-use interface for users to browse and purchase pre-owned games at affordable prices, as well as the ability so tell their own games directly to other users.">
+    <title>GameHub | Home</title>
+    <link href="/css/styles.css" rel="stylesheet">
+    <link href="/css/styles-index.css" rel="stylesheet">
+    <link href="/css/loading-animation.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/801ba823f5.js" crossorigin="anonymous"></script>
+    <!-- Hotjar Tracking Code for https://scintillating-sherbet-73ebbf.netlify.app/ -->
+    <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:3663714,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+  </head>
+  <body>
+    <header>
+      <input type="checkbox" id="menu-checkbox">
+      <label for="menu-checkbox"><i class="fas fa-bars"></i></label>
+      <h2>GameHub</h2>
+      <nav>
+         <ul>
+            <li><a href="index.html" class="active-page">Home</a></li>
+            <li><a href="games-page.html">Games</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+         </ul>
+      </nav>
+      <div class="shopping-cart">
+        <a href="cart-summary.html" aria-label="cart link"><i class="fa-solid fa-bag-shopping"></i></a>
+        <div class="shopping-cart-amount"></div>
+      </div>
+    </header>
+    <main>
+      <section class="main-home">
+        <img src="/images/gamehublogonotext.png" alt="Gamehub logo">
+        <h1>The Universe of <span class="line-break"></span>Games</h1>
+      </section>
+
+      <section class="homepage-games">
+        <h2>Our Games</h2>
+        <div class="homepage-games__container">
+          <div class="loading"></div>
+          <div class="error"></div>
+        </div>
+        <a href="games-page.html" class="cta-purple cta">View All Games</a>
+      </section>
+
+      <section class="homepage-contact flex-column">
+        <h2>Very soon GameHub will allow you to sell your used games, sign up below and be the first to know when this feature arrives!</h2>
+        <form class="homepage-contact__register">
+          <input type="email" name="email" id="email">
+          <button class="cta cta-register">Register</button>
+        </form>
+        <div class="email-error" id="emailError">Please enter a valid email address</div>
+        <div class="homepage-contact__item flex-column">
+          <h2>Got any questions? Contact us!</h2>
+          <a href="contact.html" class="cta-black cta">Contact us</a>
+        </div>
+      </section>
+    
+      <section class="homepage-reviews flex-column">
+        <h2>Reviews</h2>
+        <div class="homepage-reviews__item flex-column">
+          <h3>Lorem ipsum dolor sit amet consectetur</h3>
+          <p>12 Apr 2023 | Ola Nordmann</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, hic dolorum? Eum ex illo ipsa, vel vero pariatur quibusdam ullam voluptatibus officiis cumque dolor illum!</p>
+        </div>
+        <div class="homepage-reviews__item flex-column">
+          <h3>Lorem ipsum dolor sit amet consectetur</h3>
+          <p>10 Apr 2023 | Ola Nordmann</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, hic dolorum? Eum ex illo ipsa, vel vero pariatur quibusdam ullam voluptatibus officiis cumque dolor illum!</p>
+        </div>
+      </section>
+
+      <section class="homepage-about flex-column">
+        <h2>About us</h2>
+        <p>GameHub allows users to create an account and list their games for sale, complete with descriptions and pricing information. Buyers can browse through the selection of games available, filter by console or genre, and make purchases securely through the website. GameHub also offers a rating and review system for both buyers and sellers, to help ensure trust and reliability within the community.</p>
+        <p>Whether you're looking to expand your gaming collection or declutter your game shelf, GameHub provides a convenient and reliable platform for buying and selling used games.</p>
+        <div class="icons">
+          <i class="fa-brands fa-twitter"></i> 
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-tiktok"></i>
+          <i class="fa-brands fa-youtube"></i>
+        </div>
+      </section>
+
+    </main>
+    <footer>
+      <p>&copy; 2023 GameHub</p>
+      <p>Online Game Provider</p>
+    </footer>
+    <script src="/js/script-index.js" type="module"></script>
+  </body>
+</html>

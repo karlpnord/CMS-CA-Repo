@@ -1,0 +1,101 @@
+@import url(/css/variables.css);
+
+/* Form styling */
+#cvc {
+   max-width: 50%;
+}
+
+input {
+   height: 40px;
+}
+
+form {
+   display: flex;
+   flex-direction: column;
+}
+
+form > * {
+   margin: 5px 0;
+}
+
+input[type="text"] {
+   margin-bottom: 25px;
+}
+
+
+/* Main content styling */
+main {
+   display: grid;
+   place-items: center;
+   align-content: center;
+   gap: 3rem;
+   margin: 80px 0;
+}
+
+.grid-container {
+   max-width: 46rem;
+   min-height: 50vh;
+   margin: 0 20px;
+   display: grid;
+   grid-template-rows: auto auto;
+   border-radius: 2rem;
+   overflow: hidden;
+   box-shadow: var(--container-shadow);
+   border-top: 3px solid var(--clr-primary);
+   border-bottom: 3px solid var(--clr-primary);
+}
+
+.container__item {
+   padding: 2.5rem;
+   display: grid;
+   align-content: flex-start;
+   gap: 1rem;
+}
+
+.container__item h2 {
+   font-size: 1.25em;
+}
+
+/* Personal details image styling */
+
+.image-item {
+   display: flex;
+   justify-content: center;
+   margin-top: 40px;
+}
+
+.image-item img {
+   max-width: 200px;
+}
+
+/* CTA additional styling */
+.cta-purple {
+   margin-top: 25px;
+   border: none;
+}
+
+.cta-disabled {
+   background: #c4c4c4;
+}
+
+.cta-enabled {
+   background: var(--clr-primary);
+}
+
+/* Responsive styling */
+@media (min-width: 800px) {
+   .grid-container {
+      width: 60rem;
+      min-width: 35rem;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+   }
+
+   form label {
+      font-size: 1em;
+   }
+
+   .container__item h2 {
+      font-size: 1.6em;
+   }
+}

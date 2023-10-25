@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The games page on GameHub is the central hub for buying and selling video games online. The page features a user-friendly interface to quickly browse the games you want to buy.">
+    <title>GameHub | Games</title>
+    <link href="/css/styles.css" rel="stylesheet">
+    <link href="/css/styles-gamespage.css" rel="stylesheet">
+    <link href="/css/loading-animation.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/801ba823f5.js" crossorigin="anonymous"></script>
+    <!-- Hotjar Tracking Code for https://scintillating-sherbet-73ebbf.netlify.app/ -->
+   <script>
+      (function(h,o,t,j,a,r){
+         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+         h._hjSettings={hjid:3663714,hjsv:6};
+         a=o.getElementsByTagName('head')[0];
+         r=o.createElement('script');r.async=1;
+         r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+         a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+   </script>
+  </head>
+  <body>
+   <header>
+      <input type="checkbox" id="menu-checkbox">
+      <label for="menu-checkbox"><i class="fas fa-bars"></i></label>
+      <h2>GameHub</h2>
+      <nav>
+         <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="games-page.html" class="active-page">Games</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+         </ul>
+      </nav>
+      <div class="shopping-cart">
+        <a href="cart-summary.html" aria-label="cart link"><i class="fa-solid fa-bag-shopping"></i></a>
+        <div class="shopping-cart-amount"></div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+         <section class="secondary-nav items">
+            <a href="index.html">
+               <i class="fa-solid fa-xmark"></i>
+               <h1>Games</h1>
+            </a>
+         </section>
+         <figure class="image-item items">
+            <img src="/images/gamehublogo.png" alt="Gamehub logo">
+         </figure>
+         <form class="form-item items">
+            <label for="search" id="searchlabel">Search:</label>
+            <input type="text" id="search" name="search" placeholder="Search for game">
+         </form>
+      </div>
+
+      <div class="horizontal-line"></div>
+      
+      
+      <div class="loading"></div>
+      <div class="error"></div>
+      <div class="games" style="display: none"></div>
+
+
+    </main>
+    <footer>
+      <p>&copy; 2023 GameHub</p>
+      <p>Online Game Provider</p>
+    </footer>
+    
+    <script src="./js/games.js" type="module"></script>
+  </body>
+</html>

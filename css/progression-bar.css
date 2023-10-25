@@ -1,0 +1,40 @@
+.progression-bar {
+   display: flex;
+   width: 90%;
+   max-width: 30em;
+   align-items: center;
+}
+
+.progression-bar__item {
+   flex: 1;
+   text-align: center;
+   padding: 0.5em 0;
+   border-radius: 0.5em;
+   width: 50px;
+   box-shadow: var(--container-shadow);
+   border-top: 2px solid var(--clr-secondary);
+   border-bottom: 2px solid var(--clr-secondary);
+}
+
+.progression-bar__item i {
+   font-size: 2em;
+   color: var(--clr-primary);
+}
+
+.progression-bar__active {
+   background: var(--clr-primary);
+}
+
+.progression-bar__active i {
+   color: #fff;
+}
+
+.figure {
+   width: 50px;
+   height: 10px;
+   box-shadow: var(--container-shadow);
+}
+
+.figure-active {
+   background: var(--clr-primary);
+}

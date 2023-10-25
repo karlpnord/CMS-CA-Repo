@@ -1,0 +1,87 @@
+@import url(/css/variables.css);
+
+main {
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   gap: 2em;
+   max-width: 46rem;
+   min-height: 55vh;
+   align-items: center;
+   margin: 3em auto;
+   justify-content: center;
+}
+
+.article-item {
+   padding: 20px;
+   font-size: 1.2em;
+   display: flex;
+   flex-direction: column; 
+   margin: 0 30px;
+}
+
+.article-item > * {
+   margin: 20px 0;
+}
+
+.article-item h1 {
+   font-size: 2em;
+   font-family: var(--ff-right);
+   letter-spacing: 1px;
+}
+
+.button-item {
+   display: flex;
+   flex-direction: column;
+   gap: .5em;
+}
+
+.cta {
+   padding: 10px 50px;
+   margin: auto 0;
+   font-size: 1.2em;
+   font-weight: 600;
+   text-decoration: none;
+   max-width: 300px;
+}
+
+.cta-purple2 {
+   background: var(--clr-primary);
+   color: #fff;
+   border-radius: 8px;
+   transition: background ease 300ms;
+}
+
+.cta-white {
+   color: #000;
+   border-radius: 8px;
+   transition: background ease 300ms;
+   background: #fff;
+}
+
+.cta-purple2:hover {
+   background: var(--clr-secondary);
+   
+}
+
+.cta-white:hover {
+   background: var(--bg-light);
+   
+}
+
+/* Responsive */
+
+@media (min-width: 730px) {
+   .button-item {
+      flex-direction: row;
+      gap: 0;
+   }
+
+   .cta-purple2 {
+      border-radius: 8px 0 0 8px;
+   }
+
+   .cta-white {
+      border-radius: 0 8px 8px 0;
+   }
+}
