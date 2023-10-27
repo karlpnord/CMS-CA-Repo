@@ -1,16 +1,16 @@
 import { cartLoad } from "./components/cartLoad.js";
 import { saveCart } from "./components/cartSave.js";
 import { cartAmount } from "./components/cartAmount.js";
+import { apiUrl } from "./games.js";
 
-const queryString = document.location.search;
-const params = new URLSearchParams(queryString);
-const id = params.get("id");
+const url = new URL(location.href);
+
+const id = url.searchParams.get("id");
 
 if(id === null) {
    location.href = "/";
 }
 
-const url = "https://api.noroff.dev/api/v1/gamehub/" + id;
 
 const container = document.querySelector(".grid-container");
 const loadingContainer = document.querySelector(".loading");
@@ -24,7 +24,7 @@ cartAmount();
 
 async function fetchGameProduct() {
    try {
-      const response = await fetch(url);
+      const response = await fetch(`${apiUrl}/${id}`);
       const game = await response.json();
       usability.style.display = "none";
       createHtml(game);
@@ -37,16 +37,16 @@ async function fetchGameProduct() {
 
 function createHtml(game) {
    container.style.display = "grid";
-   document.title = `GameHub - ${game.title}`;
+   document.title = `GameHub - ${game.name}`;
    container.innerHTML = `
       <div class="image-item">
-         <img src="${game.image}" alt="${game.description}">
+         <img src="${game.images[0].src}" alt="${game.description}">
       </div>
       <section class="product-item">
          <a href="games-page.html" aria-label="close link" class="close-button"><i class="fa-solid fa-xmark"></i></a>
-         <h1>${game.title}</h1>
+         <h1>${game.name}</h1>
          <p>${game.description}</p>
-         <h2>${game.price}€</h2>
+         <h2>${game.prices.price}€</h2>
          <button class="cta cta-black add-to-cart">Add to Cart</button>
       </section>`;
 
