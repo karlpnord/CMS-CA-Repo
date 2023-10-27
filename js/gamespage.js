@@ -46,7 +46,7 @@ function createHtml(game) {
          <a href="games-page.html" aria-label="close link" class="close-button"><i class="fa-solid fa-xmark"></i></a>
          <h1>${game.name}</h1>
          <p>${game.description}</p>
-         <h2>${game.prices.price}€</h2>
+         <h2>${game.prices.price}${game.prices.currency_symbol}</h2>
          <button class="cta cta-black add-to-cart">Add to Cart</button>
       </section>`;
 
@@ -70,9 +70,9 @@ function createHtml(game) {
    overlay.innerHTML = `
       <h2>Added to Cart!</h2>
       <div class="overlay__item">
-         <img src="${game.image}" alt="${game.description}">
-         <h3>${game.title}</h3>
-         <h4>${game.price}€</h4>
+         <img src="${game.images[0].src}" alt="${game.description}">
+         <h3>${game.name}</h3>
+         <h4>${game.prices.price}${game.prices.currency_symbol}</h4>
       </div>
       <div class="overlay__buttons">
          <button class="continue-shopping">Continue Shopping</button>
